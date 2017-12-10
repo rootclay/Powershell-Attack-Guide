@@ -1,6 +1,8 @@
 # Powershell-Attack-Guide
 Powershell攻击指南----黑客后渗透之道
 ## 前言
+> 本文首发于安全客，原文专题页面:https://www.anquanke.com/subject/id/89428
+
 > 一段时间以来研究Powershell，后来应朋友们对Powershell的需求，让我写一个Powershell安全入门或者介绍方面的文章，所以这篇文章就出现了。但又因为各种各样的事情搞得有些拖延，同时作者文笔不好，文章可能有不流畅的地方，还请多多见谅。这里做一些总结，来让新人对此有个大致了解，能对Powershell或是内网有更多的理解。开始之前也要感谢红线安全团队的资深安全专家[@城哥](http://triplekill.org)和朋友[x403258](http://blog.exist1ng.com)在我写文过程中的帮助。
 
 > 那么开始之前我们先来思考一下powershell一个常见的问题，那么我们知道powershell的后缀是ps1，哪为什么是ps1而不是ps2,ps3呢？那么理解这个问题呢我们可以看看powershell的特性，powershell是对下完全兼容的，也就是说你使用powershell 5.x的版本来执行powershell v1.0的代码也是完全没有问题的。那么我个人理解一下为什么是ps1，可以这么说，当我们见到ps2后缀之时就是powershell进行大的更新，也就是不对下兼容的时候，所以这里一直是使用ps1后缀。
