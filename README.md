@@ -1,7 +1,7 @@
 # Powershell-Attack-Guide
 Powershell攻击指南----黑客后渗透之道
 ## 前言
-> 本文首发于安全客，原文专题页面:https://www.anquanke.com/subject/id/89428
+> 本文首发于安全客，原文专题页面:https://www.anquanke.com/subject/id/90541
 
 > 一段时间以来研究Powershell，后来应朋友们对Powershell的需求，让我写一个Powershell安全入门或者介绍方面的文章，所以这篇文章就出现了。但又因为各种各样的事情搞得有些拖延，同时作者文笔不好，文章可能有不流畅的地方，还请多多见谅。这里做一些总结，来让新人对此有个大致了解，能对Powershell或是内网有更多的理解。开始之前也要感谢红线安全团队的资深安全专家[@城哥](http://triplekill.org)和朋友[x403258](http://blog.exist1ng.com)在我写文过程中的帮助。
 
