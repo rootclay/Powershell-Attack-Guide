@@ -6,7 +6,7 @@
 
 ### Bat
 这就是我们常用的Bat脚本，全名为批处理文件，脚本中就是我们在CMD中使用到的命令，这里提一个小问题：
-CMD的命令行执行命令的优先级是`.bat > .exe`，那么假如我放一个cmd.bat在system32目录下，那么优先执行的是cmd.bat，这里面的内容就变得不可描述起来了
+CMD的命令行执行命令的优先级是`.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH`，那么假如我通过修改PATHEXT解析顺序后放一个cmd.bat在system32目录下，那么优先执行的是cmd.bat，这里面的内容就变得不可描述起来了
 
 ### VBscript
 
