@@ -52,7 +52,34 @@ wbemtest.exe 是一个功能强大的带有图形界面的 WMI 诊断工具。�
 wmic 是一个简单的 Linux 命令行实用工具，用于执行 WMI 查询。wmis 是 Win32_Process 类的 Create 方法的远程调用命令行包装程序，并且支持使用 NTLM 哈希进行连接远程计算机，因此， wmis 已经被渗透测试人员大量使用。
 
 ### Powershell
-emmmmm...Powershell就不多说了，看下面吧。
+
+这里有一个名词是CIM（Common Information Model），简单来说WMI就是微软针对windows的CIM实现，WMI由于过度依赖135、445端口通信已经逐渐的被遗弃，现在微软针对 WMI对象的获取方式已经变为CIM，未来WinRM才是微软主推的内容。
+Powershell2.0只拥有Get-WmiObject来获取WMI对象，但PowerShell 3.0开始增加了Get-WmiObject 的另一个选择：Get-CimInstance。虽然 Get-WmiObject 仍然存在，但 Get-CimInstance 绝对是未来的选择。这个 Cmdlet 支持 WMI 类的智能提示（在 PowerShell ISE 中），并且返回的数据可读性更好：例如日期是以人类可读的日期格式返回，而Get-WmiObject显示 WMI 内部原始的日期格式。
+
+最重要的区别是它们远程工作的方法。Get-WmiObject 使用的是旧的 DCOM 协议，而 Get-CimInstance 缺省使用的是新的 WSMan 协议，不过它是灵活的，可以根据需要退回 DCOM 协议。
+
+以下示例函数通过 Get-CimInstance 远程获取 BIOS 信息。该函数缺省采用 DCOM，通过 -Protocol 参数您可以选择希望的通信协议：
+
+```powershell
+#requires -Version 3
+function Get-BIOS
+{
+    param
+    (
+        $ComputerName = $env:COMPUTERNAME,
+
+        [Microsoft.Management.Infrastructure.CimCmdlets.ProtocolType]
+        $Protocol = 'DCOM'
+    )
+    $option = New-CimSessionOption -Protocol $protocol
+    $session = New-CimSession -ComputerName $ComputerName -SessionOption $option
+    Get-CimInstance -CimSession $session -ClassName Win32_BIOS
+}
+```
+
+参考链接：
+https://blog.vichamp.com/2016/01/07/use-get-ciminstance-with-dcom/
+https://blog.ipswitch.com/get-ciminstance-vs-get-wmiobject-whats-the-difference
 
 
 ## Powershell---WMI
