@@ -1,5 +1,6 @@
 # Summary
 * [前言](README.md)
+* [常用](Common.md)
 * [基础篇](kerberos/README.md)
   * [基础知识](1. 基础内容.md)
   * [脚本编写与执行](2. 脚本编写与执行.md)
