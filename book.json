@@ -1,13 +1,95 @@
 {
+    "title": "Powershell-Attack-Guide",
+    "author": "rootclay",
+    "links": {
+        "sidebar": {
+            "rootclay": "https://github.com/rootclay"
+        }
+    },
     "plugins": [
+        "-sharing",
+        "sharing-plus",
+        "include-codeblock",
+        "ace",
+        "quiz",
+        "-lunr",
+        "-search",
+        "search-pro",
+        "collapsible-menu",
+        "bibtex-indexed-cite",
+        "-livereload",
         "prism",
-        "-highlight"
+        "-highlight",
+        "url-embed",
+        "page-footer-ex"
     ],
     "pluginsConfig": {
+        "theme-default": {
+            "showLevel": true
+        },
+        "sharing": {
+            "douban": false,
+            "facebook": false,
+            "google": false,
+            "hatenaBookmark": false,
+            "instapaper": false,
+            "line": false,
+            "linkedin": false,
+            "messenger": false,
+            "pocket": false,
+            "qq": true,
+            "qzone": true,
+            "stumbleupon": false,
+            "twitter": false,
+            "viber": false,
+            "vk": false,
+            "weibo": true,
+            "whatsapp": false,
+            "all": [
+                "facebook",
+                "google",
+                "twitter",
+                "weibo",
+                "qq",
+                "linkedin",
+                "qzone",
+                "douban"
+            ]
+        },
+        "include-codeblock": {
+            "template": "ace",
+            "unindent": true,
+            "edit": false
+        },
+        "quiz": {
+            "labels": {
+                "check": "提交答案",
+                "showExplanation": "显示解释",
+                "showCorrect": "显示正确答案",
+                "explanationHeader": "释义"
+            },
+            "text": {
+                "noChosen": "Choose at least one answer",
+                "incomplete": "Some correct answers are missing"
+            },
+            "buttons": {
+                "showCorrect": true,
+                "showExplanation": true
+            }
+        },
+        "bibtex-indexed-cite": {
+            "path": "/"
+        },
         "prism": {
             "css": [
-                "prism-themes/themes/prism-base16-ateliersulphurpool.light.css"
+                "prismjs/themes/prism-solarizedlight.css"
             ]
+        },
+        "page-footer-ex": {
+            "copyright": "By [rootclay](https://github.com/rootclay)，使用[知识共享 署名-相同方式共享 4.0协议](https://creativecommons.org/licenses/by-sa/4.0/)发布",
+            "markdown": true,
+            "update_label": "此页面修订于：",
+            "update_format": "YYYY-MM-DD HH:mm:ss"
         }
     }
 }
