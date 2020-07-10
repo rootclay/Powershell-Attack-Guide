@@ -2,7 +2,7 @@
 Powershell攻击指南----黑客后渗透之道
 
 ## 前言
-> 时隔许久再来更新曾经的文章，对其中一些知识点重新理解记录。（2020-4-13）另外，重新更新了更可读的gitbook：https://rootclaybook.gitbook.io/powershell-attack-guide/
+> 时隔许久再来更新曾经的文章，对其中一些知识点重新理解记录。（2020-4-13）另外，重新更新了更可读的gitbook：https://rootclay.gitbook.io/powershell-attack-guide/
 
 > 本文首发于安全客，原文专题页面:https://www.anquanke.com/subject/id/90541
 
